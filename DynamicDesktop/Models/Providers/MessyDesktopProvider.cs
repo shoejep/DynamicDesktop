@@ -1,4 +1,4 @@
-﻿using DynamicDesktop.Models.Views.Interfaces;
+﻿using DynamicDesktop.Models.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -12,6 +12,9 @@ namespace DynamicDesktop.Models.Providers
     {
         public TimeSpan Delay => TimeSpan.Zero;
 
+        public string Name => "Messy Desktop";
+
+        public string Description => "Display the current messy state of your desktop (based on how many files there are)";
 
         private readonly string Path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 

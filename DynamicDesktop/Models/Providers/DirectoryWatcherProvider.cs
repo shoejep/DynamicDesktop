@@ -1,4 +1,4 @@
-﻿using DynamicDesktop.Models.Views.Interfaces;
+﻿using DynamicDesktop.Models.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,9 +8,13 @@ using System.Threading.Tasks;
 
 namespace DynamicDesktop.Models.Providers
 {
-    public class ErrorEmailProvider : IProvider
+    public class DirectoryWatcherProvider : IProvider
     {
         public TimeSpan Delay => TimeSpan.Zero;
+
+        public string Name => "Directory Watcher";
+
+        public string Description => "Display the file name of the most recently updated file in C://tmp//";
 
         private readonly string Path = "C://tmp//";
 
